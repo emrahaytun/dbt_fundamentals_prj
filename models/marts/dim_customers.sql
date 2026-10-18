@@ -2,13 +2,13 @@
 with
     customers as (
 
-        select * from {{ ref('src_dbt_eaytun__customer') }}
+        select * from {{ ref('stg_dbt_eaytun__customer') }}
 
     ),
 
     orders as (
 
-      select * from {{ ref('src_dbt_eaytun__orders') }}
+      select * from {{ ref('stg_dbt_eaytun__orders') }}
 
     ),
 
