@@ -2,7 +2,7 @@
 with
     customers as (
 
-        select * from {{ ref('stg_dbt_eaytun__customer') }}
+        select * from {{ ref('stg_dbt_eaytun__customers') }}
 
     ),
 
