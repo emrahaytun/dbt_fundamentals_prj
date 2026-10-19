@@ -2,6 +2,7 @@ sources:
   - name: jaffle_shop
     database: raw
     schema: jaffle_shop
+    description: That is database schema namen in datasoruce
     config:
      freshness:
        warn_after:
@@ -14,10 +15,20 @@ sources:
 
     tables:
       - name: customers
+        description: Raw data customers table.
         config:
           freshness: null
+        columns:
+          - name: id
+            description: Primary key customer row table
+            data_tests:
+              - not_null
+              - unique
+                
+                
        
       - name: orders
+        description: Raw data orders table.
     
 
     # dbt source freshness --> komutu ile son yüklemenin freshness durumu kontrol edilir.
