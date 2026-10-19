@@ -3,6 +3,7 @@ models:
     description: the grain of this table is unique customer per row
     columns:
       - name: customer_id
+        description:  Primary key for the customer
         data_tests:
           - not_null
           - unique

@@ -5,11 +5,13 @@ models:
     description: the data grain is one order per data
     columns:
       - name: order_id
+        description:  "{{ doc('order_id') }}" # _doc_jaffle_shop.md dosyasından alıyor
         data_tests:
           - not_null
           - unique
 
       - name: order_status
+        description: "{{ doc('order_status') }}" # _doc_jaffle_shop.md dosyasından alıyor
         data_tests:
           - accepted_values:
               arguments:
@@ -22,6 +24,7 @@ models:
                   - placed_emrah
                   
       - name: customer_id
+        description: Foregin key for the order table
         data_tests:
           - relationships:
               arguments: 
