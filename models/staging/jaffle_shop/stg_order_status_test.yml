@@ -1,14 +1,8 @@
 version: 2
 
 models:
-  - name: stg_dbt_eaytun__customers
-    columns:
-      - name: customer_id
-        data_tests:
-          - not_null
-          - unique
-
   - name: stg_dbt_eaytun__orders
+    description: the data grain is one order per data
     columns:
       - name: order_id
         data_tests:

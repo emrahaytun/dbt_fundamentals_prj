@@ -1,0 +1,10 @@
+models:
+  - name: stg_dbt_eaytun__customers
+    description: the grain of this table is unique customer per row
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+  
